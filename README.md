@@ -167,3 +167,44 @@ GET /_cluster/health?pretty
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/6.png?raw=true)
 
+
+on the elasticsearch node, write the below command :
+```bash
+bin/elasticsearch-reset-password -u logstash_system --auto
+```
+
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/7.png?raw=true)
+
+and copy the result to the logstash node and logstash.yaml :
+```
+xpack.monitoring.elasticsearch.username: "logstash_system"
+xpack.monitoring.elasticsearch.password: "nMv9pFyreKMIkzQh-GEy"
+```
+
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/8.png?raw=true)
+
+then change the elastoc node auth info in the logstash.conf :
+```conf
+output {
+	elasticsearch {
+		hosts => "elasticsearch:9200"
+		#user => "logstash_internal"
+		#password => "${LOGSTASH_INTERNAL_PASSWORD}"
+		user => "elastic"
+		password => "changeme"
+	}
+}
+```
+
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/9.png?raw=true)
+
+check the logstash log :
+
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/10.png?raw=true)
+
+and logstash info :
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/11.png?raw=true)
+
+and the docker desktop stack shows the stack healthy :
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/12.png?raw=true)
+
