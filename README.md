@@ -9,7 +9,7 @@ docker pull docker.elastic.co/kibana/kibana:8.13.4
 docker pull docker.elastic.co/logstash/logstash:8.13.4
 ```
 
-2) write the docker compose file :
+2) Write the docker compose file :
 ```yaml
 version: '3.7'
 
@@ -134,22 +134,22 @@ volumes:
 docker compose up
 ```
 
-test the elastic node via browser :
+4) Test the elastic node via browser :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/1.png?raw=true)
 
-add elasticsearch on etc/hosts (dns record) :
+5) Add elasticsearch on etc/hosts (dns record) :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/2.png?raw=true)
 
-on the elasticsearch node, write the below command :
+6) On the elasticsearch node, write the below command :
 ```bash
 bin/elasticsearch-reset-password -u kibana_system --auto
 ```
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/3.png?raw=true)
 
-and copy the result to the kibana node and kibana.yaml :
+7) And copy the result to the kibana node and kibana.yaml :
 ```
 elasticsearch.username: "kibana_system"
 elasticsearch.password: "q7pgSbw_JYm9ehk-=kc+"
@@ -157,11 +157,11 @@ elasticsearch.password: "q7pgSbw_JYm9ehk-=kc+"
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/4.png?raw=true)
 
-and go to kibana portal :
+8) And go to kibana portal :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/5.png?raw=true)
 
-and get the elastic node healthy info from kibana :
+9) Get the elastic node healthy info from kibana :
 ```
 GET /_cluster/health?pretty
 ```
@@ -169,14 +169,14 @@ GET /_cluster/health?pretty
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/6.png?raw=true)
 
 
-on the elasticsearch node, write the below command :
+10) On the elasticsearch node, write the below command :
 ```bash
 bin/elasticsearch-reset-password -u logstash_system --auto
 ```
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/7.png?raw=true)
 
-and copy the result to the logstash node and logstash.yaml :
+11) Copy the result to the logstash node and logstash.yaml :
 ```
 xpack.monitoring.elasticsearch.username: "logstash_system"
 xpack.monitoring.elasticsearch.password: "nMv9pFyreKMIkzQh-GEy"
@@ -184,7 +184,7 @@ xpack.monitoring.elasticsearch.password: "nMv9pFyreKMIkzQh-GEy"
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/8.png?raw=true)
 
-then change the elastoc node auth info in the logstash.conf :
+12) Then change the elastoc node auth info in the logstash.conf :
 ```conf
 output {
 	elasticsearch {
