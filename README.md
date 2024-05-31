@@ -199,15 +199,15 @@ output {
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/9.png?raw=true)
 
-check the logstash log :
+13) Check the logstash log :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/10.png?raw=true)
 
-and logstash info :
+14) And logstash info :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/11.png?raw=true)
 
-and the docker desktop stack shows the stack healthy :
+15) And the docker desktop shows the stack healthy :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/12.png?raw=true)
 
