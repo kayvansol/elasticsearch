@@ -2,13 +2,14 @@
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/0.png?raw=true)
 
-Pull the related docker images :
+1) Pull the related docker images :
 ```bash
 docker pull docker.elastic.co/elasticsearch/elasticsearch:8.13.4
 docker pull docker.elastic.co/kibana/kibana:8.13.4
 docker pull docker.elastic.co/logstash/logstash:8.13.4
 ```
-docker compose file :
+
+2) write the docker compose file :
 ```yaml
 version: '3.7'
 
@@ -128,16 +129,16 @@ volumes:
 
 ```
 
-Start your deployment :
+3) Start your deployment without 'Setup' service (manual deployment) :
 ```bash
 docker compose up
 ```
 
-test the elastic node on browser :
+test the elastic node via browser :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/1.png?raw=true)
 
-set elasticsearch on etc/hosts (dns record) :
+add elasticsearch on etc/hosts (dns record) :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/2.png?raw=true)
 
