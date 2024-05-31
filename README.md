@@ -2,14 +2,14 @@
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/0.png?raw=true)
 
-1) Pull the related docker images :
+1) Pull the related docker **images** :
 ```bash
 docker pull docker.elastic.co/elasticsearch/elasticsearch:8.13.4
 docker pull docker.elastic.co/kibana/kibana:8.13.4
 docker pull docker.elastic.co/logstash/logstash:8.13.4
 ```
 
-2) Write the docker compose file :
+2) Write the **docker compose** file :
 ```yaml
 version: '3.7'
 
@@ -129,12 +129,12 @@ volumes:
 
 ```
 
-3) Start your deployment without 'Setup' service (manual deployment) :
+3) Start your deployment without 'Setup' service (**manual** deployment) :
 ```bash
 docker compose up
 ```
 
-4) Test the elastic node via browser :
+4) Test the **elastic** node via browser :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/1.png?raw=true)
 
@@ -149,7 +149,7 @@ bin/elasticsearch-reset-password -u kibana_system --auto
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/3.png?raw=true)
 
-7) And copy the result to the kibana node and kibana.yaml :
+7) And copy the result to the **kibana** node and **kibana.yaml** :
 ```
 elasticsearch.username: "kibana_system"
 elasticsearch.password: "q7pgSbw_JYm9ehk-=kc+"
@@ -176,7 +176,7 @@ bin/elasticsearch-reset-password -u logstash_system --auto
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/7.png?raw=true)
 
-11) Copy the result to the logstash node and logstash.yaml :
+11) Copy the result to the **logstash** node and **logstash.yaml** :
 ```
 xpack.monitoring.elasticsearch.username: "logstash_system"
 xpack.monitoring.elasticsearch.password: "nMv9pFyreKMIkzQh-GEy"
@@ -184,7 +184,7 @@ xpack.monitoring.elasticsearch.password: "nMv9pFyreKMIkzQh-GEy"
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/8.png?raw=true)
 
-12) Then change the elastoc node auth info in the logstash.conf :
+12) Then change the elastic node auth info in the **logstash.conf** :
 ```conf
 output {
 	elasticsearch {
@@ -207,7 +207,6 @@ output {
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/11.png?raw=true)
 
-15) And the docker desktop shows the stack healthy :
+15) And the docker desktop shows that stack is healthy :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/12.png?raw=true)
-
