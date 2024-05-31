@@ -203,8 +203,10 @@ check the logstash log :
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/10.png?raw=true)
 
 and logstash info :
+
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/11.png?raw=true)
 
 and the docker desktop stack shows the stack healthy :
+
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/12.png?raw=true)
 
