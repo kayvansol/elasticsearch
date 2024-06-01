@@ -255,3 +255,8 @@ then run the script :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/16.png?raw=true)
 
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/17.png?raw=true)
+
+17) Search index records via Dev Tools at kibana :
+
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/18.png?raw=true)
