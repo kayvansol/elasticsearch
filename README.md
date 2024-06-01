@@ -215,11 +215,23 @@ output {
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/13.png?raw=true)
 
-17) Add below line at logstash.conf :
+17) Add below line at **logstash.conf** :
+```conf
+output {
+	elasticsearch {
+		hosts => "elasticsearch:9200"
+		#user => "logstash_internal"
+		#password => "${LOGSTASH_INTERNAL_PASSWORD}"
+		user => "elastic"
+		password => "changeme"
+        index => "testindex"
+	}
+}
+```
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/14.png?raw=true)
 
-18) Write some python script for sending data to related port :
+18) Write some **python** scripts for sending data to the related port (50000) :
 ```python
 import socket
 import sys
@@ -247,11 +259,11 @@ sock.close()
 sys.exit(0)
 ```
 
-then run the script :
+Then run the python script :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/15.png?raw=true)
 
-16) After some seconds data apear at your elastic index :
+16) After some seconds, data appear at your elastic index :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/16.png?raw=true)
 
