@@ -211,11 +211,11 @@ output {
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/12.png?raw=true)
 
-16) Create your index named **testindex** in elasticsearch :
+16) Create your index named **testindex** in elasticsearch via kibana :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/13.png?raw=true)
 
-17) Add below line at **logstash.conf** :
+17) Add below lines at **logstash.conf** :
 ```conf
 output {
 	elasticsearch {
