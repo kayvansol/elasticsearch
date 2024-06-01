@@ -9,7 +9,7 @@ elasticsearch.hosts: [ "http://elasticsearch:9200" ]
 
 # bin/elasticsearch-reset-password -u kibana_system --auto
 elasticsearch.username: "kibana_system"
-elasticsearch.password: "u2NiOveQWt6+=BMqrzf_"
+elasticsearch.password: "7I=7HT_IDgo=nSqm4cIT"
 
 monitoring.ui.container.elasticsearch.enabled: true
 monitoring.ui.container.logstash.enabled: true
