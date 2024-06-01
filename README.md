@@ -224,7 +224,7 @@ output {
 		#password => "${LOGSTASH_INTERNAL_PASSWORD}"
 		user => "elastic"
 		password => "changeme"
-        index => "testindex"
+        	index => "testindex"
 	}
 }
 ```
