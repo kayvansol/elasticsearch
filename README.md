@@ -210,3 +210,48 @@ output {
 15) And the docker desktop shows that stack is healthy :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/12.png?raw=true)
+
+16) Create your index named **testindex** in elasticsearch :
+
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/13.png?raw=true)
+
+17) Add below line at logstash.conf :
+
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/14.png?raw=true)
+
+18) Write some python script for sending data to related port :
+```python
+import socket
+import sys
+
+HOST = '192.168.1.4'
+PORT = 50000
+
+try:
+  sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+except socket.error as msg:
+  sys.stderr.write("[ERROR] %s\n" % msg[1])
+  sys.exit(1)
+
+try:
+  sock.connect((HOST, PORT))
+except socket.error as msg:
+  sys.stderr.write("[ERROR] %s\n" % msg[1])
+  sys.exit(2)
+
+msg = '{"id":"1","name":"kayvan soleimani","email":"kayvan.sol2@gmail.com}'
+
+sock.send(msg.encode('utf-8') )
+
+sock.close()
+sys.exit(0)
+```
+
+then run the script :
+
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/15.png?raw=true)
+
+16) After some seconds data apear at your elastic index :
+
+![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/16.png?raw=true)
+
