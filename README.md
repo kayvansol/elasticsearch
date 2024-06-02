@@ -149,7 +149,7 @@ bin/elasticsearch-reset-password -u kibana_system --auto
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/3.png?raw=true)
 
-7) And copy the result to the **kibana** node and **kibana.yaml** :
+7) And copy the result to the **kibana** node and **kibana.yml** :
 ```
 elasticsearch.username: "kibana_system"
 elasticsearch.password: "q7pgSbw_JYm9ehk-=kc+"
@@ -176,7 +176,7 @@ bin/elasticsearch-reset-password -u logstash_system --auto
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/7.png?raw=true)
 
-11) Copy the result to the **logstash** node and **logstash.yaml** :
+11) Copy the result to the **logstash** node and **logstash.yml** :
 ```
 xpack.monitoring.elasticsearch.username: "logstash_system"
 xpack.monitoring.elasticsearch.password: "nMv9pFyreKMIkzQh-GEy"
@@ -231,7 +231,7 @@ output {
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/14.png?raw=true)
 
-18) Write some **python** scripts or C# code for sending data to the related port (50000) :
+18) Write some **python** scripts or **C#** code for sending data to the related port (50000) :
 ```python
 import socket
 import sys
