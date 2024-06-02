@@ -16,7 +16,7 @@ except socket.error as msg:
   sys.stderr.write("[ERROR] %s\n" % msg[1])
   sys.exit(2)
 
-msg = '{"id":"1","name":"kayvan soleimani","email":"kayvan.sol2@gmail.com}'
+msg = '{"id":"1","name":"mahla soleimani","email":"mahla.sol2@gmail.com}'
 
 sock.send(msg.encode('utf-8') )
 
