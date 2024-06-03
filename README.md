@@ -259,6 +259,7 @@ sock.close()
 sys.exit(0)
 ```
 
+C# Code :
 ```c#
 ﻿using System;
 using System.Net.Sockets;
@@ -307,6 +308,6 @@ Then run the python script :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/17.png?raw=true)
 
-17) Search index records via Dev Tools at kibana :
+17) You can search index records via Dev Tools at kibana :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/18.png?raw=true)
