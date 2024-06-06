@@ -1,8 +1,8 @@
-# Deploy Elasticsearch, Kibana &amp; Logstash with Docker Compose
+# Deploy Elasticsearch, Kibana &amp; Logstash (ELK Stack) with Docker Compose
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/0.png?raw=true)
 
-1) Pull the related docker **images** :
+1) Pull the all related docker **images** :
 ```bash
 docker pull docker.elastic.co/elasticsearch/elasticsearch:8.13.4
 docker pull docker.elastic.co/kibana/kibana:8.13.4
@@ -138,7 +138,7 @@ docker compose up
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/1.png?raw=true)
 
-5) Add elasticsearch on etc/hosts (dns record) :
+5) Add elasticsearch A record within etc/hosts (dns record) :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/2.png?raw=true)
 
