@@ -149,7 +149,7 @@ bin/elasticsearch-reset-password -u kibana_system --auto
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/3.png?raw=true)
 
-7) And copy the result to the **kibana** node and **kibana.yml** :
+7) And copy the New Value result to the **kibana** node and **kibana.yml** :
 ```
 elasticsearch.username: "kibana_system"
 elasticsearch.password: "q7pgSbw_JYm9ehk-=kc+"
@@ -157,7 +157,7 @@ elasticsearch.password: "q7pgSbw_JYm9ehk-=kc+"
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/4.png?raw=true)
 
-8) And go to kibana portal :
+8) And go to the kibana portal :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/5.png?raw=true)
 
@@ -176,7 +176,7 @@ bin/elasticsearch-reset-password -u logstash_system --auto
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/7.png?raw=true)
 
-11) Copy the result to the **logstash** node and **logstash.yml** :
+11) Copy the New Value result to the **logstash** node and **logstash.yml** :
 ```
 xpack.monitoring.elasticsearch.username: "logstash_system"
 xpack.monitoring.elasticsearch.password: "nMv9pFyreKMIkzQh-GEy"
