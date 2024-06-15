@@ -9,7 +9,7 @@ docker pull docker.elastic.co/kibana/kibana:8.13.4
 docker pull docker.elastic.co/logstash/logstash:8.13.4
 ```
 
-2) Write the **docker compose** file :
+2) Write the **Docker Compose** file :
 ```yaml
 version: '3.7'
 
@@ -134,11 +134,11 @@ volumes:
 docker compose up
 ```
 
-4) Test the **elastic** node via browser :
+4) Test the **Elastic** node via browser :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/1.png?raw=true)
 
-5) Add elasticsearch A record within etc/hosts (dns record) :
+5) Add elasticsearch DNS A record within etc/hosts :
 
 ![alt text](https://raw.githubusercontent.com/kayvansol/elasticsearch/main/img/2.png?raw=true)
 
